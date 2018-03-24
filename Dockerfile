@@ -7,6 +7,10 @@ ARG PY3=3.6.4
 ENV PYENV_ROOT /pyenv
 ENV PATH ${PYENV_ROOT}/bin:${PYENV_ROOT}/shims:${PATH}
 
+# Force python to use unicode in terminal
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y build-essential git curl libbz2-dev libssl-dev libreadline-dev libsqlite3-dev && \
     curl -sSL https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
