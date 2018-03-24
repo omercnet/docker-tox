@@ -7,6 +7,10 @@ Usage:
 
     $ docker run --rm -it -v `pwd`:/app omercnet/tox
 	
+Or if you're into [alpine](https://github.com/omercnet/docker-tox/tree/alpine):
+
+    $ docker run --rm -it -v `pwd`:/app omercnet/tox:alpine
+
 You can also use 'natively' adding this to your shell rc:
 
 	$ alias tox='docker run --rm -it -v `pwd`:/app omercnet/tox
