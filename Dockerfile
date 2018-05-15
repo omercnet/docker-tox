@@ -19,7 +19,7 @@ RUN echo eval "$(pyenv init -)" >> /root/.bashrc && \
     pyenv install ${PY2} && \
     pyenv install ${PY3} && \
     pyenv global ${PY2} ${PY3} && \
-    pip install -U pip tox
+    pip install -U pip tox tox-travis
 
 WORKDIR /app
 VOLUME /app
