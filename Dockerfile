@@ -2,7 +2,7 @@ FROM ubuntu
 MAINTAINER Omer Cohen <docker+tox@omer.io>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    apt-get install -y python-pip python3-pip && \
+    apt-get install -y python-pip python3-pip git && \
     python2 -m pip install -U pip tox tox-travis && \
     python3 -m pip install -U pip tox tox-travis
 
